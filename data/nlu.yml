@@ -1,0 +1,182 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: main
+  examples: |
+    - main
+    - main menu
+
+- intent: job
+  examples: |
+    - I am looking for a job
+    - I want to apply for job
+    - job
+    - apply
+    - searching for job
+
+- intent: product
+  examples: |
+    - I am looking for a product 
+    - product
+    - what are your products 
+    - products offered
+    - HRMS
+
+- intent: service
+  examples: |
+    - I am looking for a service
+    - what are the services you offer
+    - type of services
+    - services offered
+    - service
+
+- intent: contact
+  examples: |
+    - contact
+    - contact us
+    - how can I contact you
+    - contact information
+    - what is your address
+    - what is your phone number
+    - contact number
+
+- intent: demo
+  examples: |
+    - I would like a demo
+    - I want a demo
+    - request demo
+    - request callback
+    - I want a call back
+
+- intent: staffing
+  examples: |
+    - staffing
+    - IT staffing
+    - staffing services
+    - what is staffing
+    - staff
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - what is 2+2
+    - who is the president
+    - how old are you
+
+
+- intent: ess
+  examples: |
+    - ess
+    - what is ess 
+    - what is employee self service
+    - employee self service
+    - ess software
+
+- intent: payroll
+  examples: |
+    - payroll product
+    - payroll management
+    - payroll software
+
+- intent: atlev
+  examples: |
+    - attendance
+    - attendance and leave
+    - attendance and leave management
+    - leave management
+    - attendance management 
+
+- intent: sandc
+  examples: |
+    - statutory
+    - statutory and compliance
+    
+- intent: itcons
+  examples: |
+    - IT
+    - IT consulting
+    - consulting
+
+- intent: permstaff
+  examples: |
+    - permanent
+    - permanent staffing
+    - perm staff
+
+
+- intent: rpo
+  examples: |
+    - rpo 
+    - recruitment
+    - recruitmant processing
+    - recruitment process outsourcing
+
+- intent: payout
+  examples: |
+    - payroll outsourcing
+    - payroll service
+
+- intent: labcomp
+  examples: |
+    - labour compliance
+    - labour
+
+- intent: elease
+  examples: |
+    - employee leasing
+    - leasing
+
+- intent: naps
+  examples: |
+    - naps
+    - NAPS
+    - National
+    - Apprentice
