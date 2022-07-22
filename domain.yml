@@ -28,19 +28,38 @@ intents:
 forms:
   details_form:
     required_slots:
-      - name
-      - phone
+      - fname
+      - lname
+      - company
       - email
+      - phone
+      
 
 slots:
-  name:
+  fname:
     type: text
     influence_conversation: true
     mappings:
     - type: from_text
       conditions:
       - active_loop: details_form
-        requested_slot: name
+        requested_slot: fname
+  lname:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: lname
+  company:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: company 
   phone:
     type: text
     influence_conversation: true
@@ -57,6 +76,22 @@ slots:
       conditions:
       - active_loop: details_form
         requested_slot: email
+  ser:
+    type: text 
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: ser
+  subser:
+    type: text 
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: details_form
+        requested_slot: subser
     
 responses:
   utter_greet:
@@ -173,14 +208,21 @@ responses:
   utter_iamabot:
   - text: "I am a bot"
 
-  utter_ask_name: 
-  - text: "Please enter your Name"
+  utter_ask_fname: 
+  - text: "Please enter your First Name"
+
+  utter_ask_lname: 
+  - text: "Please enter your Lirst Name"
 
   utter_ask_phone:
-  - text: "{name} can you please enter your Phone Number"
+  - text: "{fname} can you please enter your Phone Number"
 
   utter_ask_email:
-  - text: "{name} can you please enter your Company E-mail Address"
+  - text: "{fname} can you please enter your E-mail Address"
+
+  utter_ask_company:
+  - text: "{fname} can you please enter your Company Name"
+
 
   utter_inform:
   - text: "Please help me with some of your information to proceed further.."
