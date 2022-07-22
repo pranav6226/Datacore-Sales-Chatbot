@@ -60,14 +60,14 @@ class ValidateDetailsForm(FormValidationAction):
         """Validate `company` value."""
 
         # Matching RegEx for Name.
-        pattern = "/^[.@&]?[a-zA-Z0-9 ]+[ !.@&()]?[ a-zA-Z0-9!()]+/"
+        pattern = "^[A-Z]+[a-zA-Z]*$"
         test_string = slot_value
         result = re.match(pattern, test_string)
         if result:
             return {"company": slot_value}
         else:
             dispatcher.utter_message(text="Please enter a valid Company Name")
-            return {"Company": None}
+            return {"company": None}
 
 
     def validate_phone(
@@ -105,7 +105,7 @@ class ValidateDetailsForm(FormValidationAction):
         if result:
             return {"email": slot_value}
         else:
-            dispatcher.utter_message(text="Please enter a valid Company E-mail address..")
+            dispatcher.utter_message(text="Please enter a valid E-mail address")
             return {"email": None}
     
 
@@ -159,4 +159,4 @@ class ActionRestart(Action):
         return "action_reset_slots"
 
     def run(self, dispatcher, tracker, domain):
-        return [SlotSet("name",None),SlotSet("phone",None),SlotSet("email",None)]
+        return [SlotSet("fname",None),SlotSet("lname",None),SlotSet("company",None),SlotSet("phone",None),SlotSet("email",None)]
