@@ -211,6 +211,10 @@ responses:
   utter_ask_fname: 
   - text: "Please enter your First Name"
 
+  utter_ask_company:
+  - text: "{fname} can you please enter your Company Name"
+
+
   utter_ask_lname: 
   - text: "Please enter your Lirst Name"
 
@@ -220,9 +224,7 @@ responses:
   utter_ask_email:
   - text: "{fname} can you please enter your E-mail Address"
 
-  utter_ask_company:
-  - text: "{fname} can you please enter your Company Name"
-
+  
 
   utter_inform:
   - text: "Please help me with some of your information to proceed further.."

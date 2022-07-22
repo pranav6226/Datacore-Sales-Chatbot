@@ -9,9 +9,17 @@ stories:
   - action: details_form
   - active_loop: details_form
   - slot_was_set:
-    - requested_slot: name
+    - requested_slot: fname
   - slot_was_set:
-    - name: Pranav Mahesh
+    - fname: Pranav
+  - slot_was_set:
+    - requested_slot: lname
+  - slot_was_set:
+    - lname: Mahesh
+  - slot_was_set:
+    - requested_slot: company
+  - slot_was_set:
+    - company: Alp Consulting
   - slot_was_set:
     - requested_slot: phone
   - slot_was_set:
