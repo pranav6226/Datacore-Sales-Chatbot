@@ -21,7 +21,7 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `fname` value."""
 
-        # Matching RegEx for Name.
+        # Matching RegEx for  Name.
         pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$"
         test_string = slot_value
         result = re.match(pattern, test_string)
@@ -59,8 +59,8 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `company` value."""
 
-        # Matching RegEx for Name.
-        pattern = "^[A-Z]+[a-zA-Z]*$"
+        # Matching RegEx for Company Name.
+        pattern = "^((?![\^!@#$*~ <>?]).)((?![\^!@#$*~<>?]).){0,73}((?![\^!@#$*~ <>?]).)$"
         test_string = slot_value
         result = re.match(pattern, test_string)
         if result:
@@ -79,7 +79,7 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `phone` value."""
 
-        # Matching RegEx for Name.
+        # Matching RegEx for Phone
         pattern = "^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
         test_string = slot_value
         result = re.match(pattern, test_string)
@@ -98,8 +98,8 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `email` value."""
 
-        # Matching RegEx for Name.
-        pattern = "^([\w.-]+)@(\[(\d{1,3}\.){3}|(?!hotmail|gmail|googlemail|yahoo|gmx|ymail|outlook|bluewin|protonmail|t\-online|web\.|online\.|aol\.|live\.)(([a-zA-Z\d-]+\.)+))([a-zA-Z]{2,63}|\d{1,3})(\]?)$"
+        # Matching RegEx for Email.
+        pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         test_string = slot_value
         result = re.match(pattern, test_string)
         if result:
