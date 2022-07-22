@@ -24,7 +24,7 @@ stories:
     - requested_slot: phone
   - slot_was_set:
     - phone: 9845588899
-    - slot_was_set:
+  - slot_was_set:
     - requested_slot: email
   - slot_was_set:
     - email: pranav.m@dcoretech.in
