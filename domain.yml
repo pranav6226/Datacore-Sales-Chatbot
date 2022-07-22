@@ -211,12 +211,14 @@ responses:
   utter_ask_fname: 
   - text: "Please enter your First Name"
 
+  utter_ask_lname: 
+  - text: "Please enter your Last Name"
+
   utter_ask_company:
   - text: "{fname} can you please enter your Company Name"
 
 
-  utter_ask_lname: 
-  - text: "Please enter your Lirst Name"
+  
 
   utter_ask_phone:
   - text: "{fname} can you please enter your Phone Number"
