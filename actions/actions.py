@@ -21,7 +21,7 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `fname` value."""
 
-        # Matching RegEx for  Name.
+        # Matching RegEx for First Name.
         pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$"
         test_string = slot_value
         result = re.match(pattern, test_string)
@@ -40,8 +40,8 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `lname` value."""
 
-        # Matching RegEx for Name.
-        pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$"
+        # Matching RegEx for Last Name.
+        pattern = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
         test_string = slot_value
         result = re.match(pattern, test_string)
         if result:
@@ -98,7 +98,7 @@ class ValidateDetailsForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `email` value."""
 
-        # Matching RegEx for Email.
+        # Matching RegEx for E-mail.
         pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         test_string = slot_value
         result = re.match(pattern, test_string)
@@ -136,9 +136,9 @@ class ActionSaveConversation(Action):
                 'First Name' : fname,
                 'Last Name' : lname,
                 'Company Name': company,
-                'phone' : phone,
-                'email' : email,
-                'transcript': chat_data
+                'Phone' : phone,
+                'E-mail' : email,
+                'Transcript': chat_data
             }
         db.Details.insert_one(details)
             # global id 
