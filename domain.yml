@@ -94,12 +94,10 @@ slots:
         requested_slot: subser
     
 responses:
-  utter_greet:
-  - text: "Hello, how can I help you today?"
 
 
   utter_main:
-    - text: "Ask a question."
+    - text: "Hello, how can I help you today?"
       buttons:
       - title: "How can I apply for a job?"
         payload: /job

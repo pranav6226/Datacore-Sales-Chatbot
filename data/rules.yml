@@ -5,7 +5,6 @@ rules:
 - rule: Give main menu when greet or say main
   steps:
   - intent: greet
-  - action: utter_greet
   - action: utter_main
 
 
