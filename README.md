@@ -1,5 +1,5 @@
 
-# Datacore Sales Chatbot
+# AI Sales Chatbot
 
 ## Executive Summary
 
